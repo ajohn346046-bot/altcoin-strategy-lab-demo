@@ -1,0 +1,296 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+  CheckCircle2,
+  FileText,
+  Gauge,
+  Github,
+  LayoutDashboard,
+  LineChart,
+  Lock,
+  ShieldCheck,
+  ShoppingCart,
+  Sparkles,
+  WalletCards,
+} from 'lucide-react';
+import './styles.css';
+
+const purchaseUrl = 'https://example.com/purchase-altcoin-strategy-lab-pro';
+const liveDemoUrl = 'https://ajohn346046-bot.github.io/altcoin-strategy-lab-demo/';
+
+const features = [
+  'Portfolio analytics preview for DOGE, ADA, XRP, POL, BTC, BCH, and custom altcoins.',
+  'USD/TWD public display concept for portfolio value, cost basis, and scenario zones.',
+  'Risk-aware dashboard preview with allocation, P/L, concentration, and cash reserve summaries.',
+  'Educational technical-analysis preview for trend, momentum, volatility, support, and resistance.',
+  'Staged buy/sell planning preview without exposing commercial strategy internals.',
+  'Governance-first safety language: no wallet connection, no exchange login, no private keys.',
+];
+
+const proItems = [
+  'Complete React + TypeScript source code',
+  'Reusable component system and advanced dashboard internals',
+  'Full scenario and decision-support engines',
+  'Technical indicator implementation and data adapters',
+  'Trade journal, risk report, and narrative scoring logic',
+  'Commercial customization rights under the purchased license',
+];
+
+const screenshots = [
+  {
+    title: 'Portfolio Overview',
+    label: 'Demo screenshot mock',
+    accent: 'bg-teal',
+    lines: ['Total value preview', 'P/L summary', 'Risk distribution', 'Cash reserve ratio'],
+  },
+  {
+    title: 'Coin Analysis',
+    label: 'Demo screenshot mock',
+    accent: 'bg-amber',
+    lines: ['Price trend preview', 'RSI / MACD modules', 'Support and resistance', 'Scenario zones'],
+  },
+  {
+    title: 'Strategy Planner',
+    label: 'Demo screenshot mock',
+    accent: 'bg-ink',
+    lines: ['Accumulation zones', 'Breakout zones', 'Partial sell zones', 'Risk-reduction plan'],
+  },
+];
+
+function ScreenshotMock({ screenshot }: { screenshot: (typeof screenshots)[number] }) {
+  return (
+    <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-glow">
+      <div className="flex items-center justify-between border-b border-slate-200 bg-slate-50 px-4 py-3">
+        <div className="flex gap-2">
+          <span className="h-3 w-3 rounded-full bg-red-400" />
+          <span className="h-3 w-3 rounded-full bg-yellow-400" />
+          <span className="h-3 w-3 rounded-full bg-green-400" />
+        </div>
+        <span className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">{screenshot.label}</span>
+      </div>
+      <div className="p-5">
+        <div className={`mb-5 h-24 rounded-lg ${screenshot.accent} bg-opacity-90 p-4 text-white`}>
+          <p className="text-sm text-white/75">{screenshot.title}</p>
+          <p className="mt-2 text-3xl font-semibold">Public Preview</p>
+        </div>
+        <div className="space-y-3">
+          {screenshot.lines.map((line, index) => (
+            <div key={line} className="flex items-center gap-3">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-mint text-xs font-bold text-teal">
+                {index + 1}
+              </span>
+              <span className="h-3 flex-1 rounded-full bg-slate-100">
+                <span className="block h-3 rounded-full bg-slate-300" style={{ width: `${72 - index * 10}%` }} />
+              </span>
+              <span className="w-36 text-sm font-medium text-slate-600">{line}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="min-h-screen bg-paper text-ink">
+      <header className="border-b border-slate-200 bg-white/90 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+          <div className="flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-teal text-white">
+              <BarChart3 size={24} />
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal">Public Demo</p>
+              <h1 className="text-lg font-semibold">Altcoin Strategy Lab</h1>
+            </div>
+          </div>
+          <a
+            href={purchaseUrl}
+            className="hidden items-center gap-2 rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 sm:flex"
+          >
+            <ShoppingCart size={17} />
+            Buy Pro Source
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section className="relative overflow-hidden bg-ink text-white">
+          <div className="absolute inset-0 demo-grid opacity-30" />
+          <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-mint">
+                <Sparkles size={16} />
+                Public sales preview. Full commercial logic is not included.
+              </div>
+              <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
+                Crypto portfolio decision support, packaged as a public demo.
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                This repository is a deployable showcase for Altcoin Strategy Lab. It presents the product concept,
+                buyer value, screenshots, disclaimers, and purchase call-to-action without exposing the full commercial source.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={purchaseUrl}
+                  className="inline-flex items-center gap-2 rounded-lg bg-mint px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
+                >
+                  Purchase Pro Source
+                  <ArrowRight size={17} />
+                </a>
+                <a
+                  href={liveDemoUrl}
+                  className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  <Github size={17} />
+                  Live Demo Placeholder
+                </a>
+              </div>
+            </div>
+            <div className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  ['No wallet connection', WalletCards],
+                  ['No exchange login', Lock],
+                  ['No API secrets', ShieldCheck],
+                  ['No real records', FileText],
+                ].map(([label, Icon]) => {
+                  const DisplayIcon = Icon as typeof WalletCards;
+                  return (
+                    <div key={label as string} className="rounded-lg border border-white/15 bg-white/10 p-4">
+                      <DisplayIcon className="text-mint" size={24} />
+                      <p className="mt-3 text-sm font-semibold">{label as string}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-12">
+          <div className="rounded-lg border border-amber-300 bg-amber-50 p-5">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="mt-1 shrink-0 text-amber" />
+              <div>
+                <h2 className="text-xl font-semibold">Strong Disclaimer</h2>
+                <p className="mt-2 leading-7 text-slate-700">
+                  This demo is for educational and analytical use only. It is not financial advice, does not guarantee
+                  profit, does not connect to wallets, does not ask for seed phrases, and does not require exchange login.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-10" id="features">
+          <div className="flex items-end justify-between gap-6">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Features</p>
+              <h2 className="mt-2 text-3xl font-semibold">What this public demo shows</h2>
+            </div>
+            <Gauge className="hidden text-teal md:block" size={42} />
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature) => (
+              <article key={feature} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+                <CheckCircle2 className="text-teal" size={22} />
+                <p className="mt-3 text-sm leading-6 text-slate-700">{feature}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-10" id="live-demo">
+          <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Live demo</p>
+            <h2 className="mt-2 text-3xl font-semibold">Deployable to GitHub Pages</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-slate-600">
+              Replace the placeholder below with your actual GitHub Pages URL after deployment.
+            </p>
+            <a href={liveDemoUrl} className="mt-5 inline-flex items-center gap-2 rounded-lg bg-teal px-5 py-3 text-sm font-semibold text-white">
+              {liveDemoUrl}
+              <ArrowRight size={17} />
+            </a>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-10" id="screenshots">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Screenshots</p>
+          <h2 className="mt-2 text-3xl font-semibold">Public preview screens</h2>
+          <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            {screenshots.map((screenshot) => (
+              <ScreenshotMock key={screenshot.title} screenshot={screenshot} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-10" id="pro">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">What buyers get in Pro version</p>
+              <h2 className="mt-2 text-3xl font-semibold">Commercial package contents</h2>
+              <p className="mt-3 leading-7 text-slate-600">
+                The public demo intentionally omits commercial-only strategy logic, advanced source internals, and reusable templates.
+              </p>
+            </div>
+            <div className="grid gap-3">
+              {proItems.map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-4">
+                  <LineChart className="text-teal" size={20} />
+                  <span className="text-sm font-medium text-slate-700">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-10" id="license">
+          <div className="rounded-lg bg-ink p-6 text-white">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-mint">License summary</p>
+            <h2 className="mt-2 text-3xl font-semibold">Public demo license boundary</h2>
+            <p className="mt-4 max-w-4xl leading-8 text-slate-300">
+              This public repository is a demo and marketing preview only. It is not the full commercial source code.
+              Redistribution, resale, extraction of product internals, or claiming this demo as a complete trading system
+              is not permitted without a separate written license. The Pro package is sold separately.
+            </p>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-5 py-12" id="purchase">
+          <div className="rounded-lg border border-slate-200 bg-white p-8 text-center shadow-glow">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Purchase link placeholder</p>
+            <h2 className="mt-3 text-3xl font-semibold">Ready to license the Pro source?</h2>
+            <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
+              Replace this placeholder with your Gumroad, Lemon Squeezy, Stripe, GitHub Sponsors, or direct sales page.
+            </p>
+            <a
+              href={purchaseUrl}
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+            >
+              <ShoppingCart size={18} />
+              Purchase Altcoin Strategy Lab Pro
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-white px-5 py-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+          <p>Altcoin Strategy Lab Demo. Public preview only.</p>
+          <p>No API keys, no private data, no wallet data, no real personal financial records.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);

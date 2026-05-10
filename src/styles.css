@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #08111f;
+  background: #f6f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.demo-grid {
+  background-image:
+    linear-gradient(rgba(207, 248, 236, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(207, 248, 236, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
