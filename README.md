@@ -1,3 +1,14 @@
+## Public Demo Notice
+
+This repository is a public demo and marketing preview only.  
+The complete Pro source code is not included in this repository.
+
+For the paid Pro source package, please contact:
+
+`ajohn346046@gmail.com`
+
+Purchase link: Coming soon.
+
 # Altcoin Strategy Lab Demo
 
 Public demo package for **Altcoin Strategy Lab**.
@@ -41,6 +52,7 @@ https://ajohn346046-bot.github.io/altcoin-strategy-lab-demo/
 This public demo uses generated mock screenshot cards inside the landing page. No real portfolio records, wallet data, exchange data, or personal financial screenshots are included.
 
 ## What Buyers Get In Pro Version
+The Pro package is delivered as a private ZIP source package after purchase.
 
 The paid Pro source package can include:
 
