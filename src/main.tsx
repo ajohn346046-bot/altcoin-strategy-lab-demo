@@ -19,8 +19,14 @@ import {
 import './styles.css';
 
 const contactEmail = 'ajohn346046@gmail.com';
-const purchaseStatus = 'Coming soon';
+const purchaseStatus = 'Contact for Early Access';
 const liveDemoUrl = 'https://ajohn346046-bot.github.io/altcoin-strategy-lab-demo/';
+const englishDisclaimer =
+  'Educational and analytical use only. Not financial advice. No profit guarantee. No wallet connection. No private keys. No exchange login.';
+const chineseDisclaimer =
+  '本工具僅供教育與分析用途，不構成財務建議，不保證獲利，不連接錢包，不要求私鑰，不需要交易所登入。';
+const chineseSummary =
+  '本頁為 Altcoin Strategy Lab Pro 的公開展示頁，不包含完整商業原始碼。Pro 版本提供完整 React + TypeScript 原始碼、投資組合輸入、風險分析、策略規劃、技術指標預覽、交易日誌與報告模組。此工具僅供教育與分析用途，不構成財務建議。';
 
 const features = [
   'Portfolio analytics preview for DOGE, ADA, XRP, POL, BTC, BCH, and custom altcoins.',
@@ -126,14 +132,17 @@ function App() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-mint">
                 <Sparkles size={16} />
-                Public sales preview. Full commercial logic is not included.
+                Public sales preview. Full commercial Pro source code is not included in this public demo.
               </div>
               <h2 className="mt-6 max-w-4xl text-4xl font-semibold leading-tight md:text-6xl">
-                Crypto portfolio decision support, packaged as a public demo.
+                A public preview for a commercial crypto portfolio decision-support dashboard.
               </h2>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
                 This repository is a deployable showcase for Altcoin Strategy Lab. It presents the product concept,
                 buyer value, screenshots, disclaimers, and purchase call-to-action without exposing the full commercial source.
+              </p>
+              <p className="mt-5 max-w-2xl rounded-lg border border-white/15 bg-white/10 p-4 text-sm leading-7 text-slate-200">
+                {chineseSummary}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
@@ -148,7 +157,7 @@ function App() {
                   className="inline-flex items-center gap-2 rounded-lg border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                 >
                   <Github size={17} />
-                  Live Demo Placeholder
+                  Contact for Early Access
                 </a>
               </div>
             </div>
@@ -180,8 +189,13 @@ function App() {
               <div>
                 <h2 className="text-xl font-semibold">Strong Disclaimer</h2>
                 <p className="mt-2 leading-7 text-slate-700">
-                  This demo is for educational and analytical use only. It is not financial advice, does not guarantee
-                  profit, does not connect to wallets, does not ask for seed phrases, and does not require exchange login.
+                  {englishDisclaimer}
+                </p>
+                <p className="mt-2 leading-7 text-slate-700">
+                  {chineseDisclaimer}
+                </p>
+                <p className="mt-2 text-sm font-semibold text-slate-800">
+                  Full commercial Pro source code is not included in this public demo.
                 </p>
               </div>
             </div>
@@ -267,8 +281,8 @@ function App() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Purchase status</p>
             <h2 className="mt-3 text-3xl font-semibold">Altcoin Strategy Lab Pro is coming soon.</h2>
             <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
-              The paid Pro source package is being prepared for Gumroad / Lemon Squeezy. For early access or licensing
-              questions, contact {contactEmail}.
+              Altcoin Strategy Lab Pro source package is being prepared for early buyers. For early access, licensing
+              questions, or bundle pricing, contact {contactEmail}.
             </p>
             <a
               href={`mailto:${contactEmail}?subject=Altcoin%20Strategy%20Lab%20Pro`}
@@ -283,8 +297,9 @@ function App() {
 
       <footer className="border-t border-slate-200 bg-white px-5 py-6">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
-          <p>Altcoin Strategy Lab Demo. Public preview only.</p>
-          <p>No API keys, no private data, no wallet data, no real personal financial records.</p>
+          <p>Altcoin Strategy Lab Demo. Public preview only. Full commercial Pro source code is not included.</p>
+          <p>{englishDisclaimer}</p>
+          <p>{chineseDisclaimer}</p>
         </div>
       </footer>
     </div>
