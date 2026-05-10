@@ -202,6 +202,17 @@ function App() {
           </div>
         </section>
 
+        <section className="mx-auto max-w-7xl px-5 pb-10">
+          <div className="rounded-lg border border-teal/20 bg-white p-6 shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">
+              Traditional Chinese Summary
+            </p>
+            <p className="mt-3 leading-8 text-slate-700">
+              {chineseSummary}
+            </p>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-5 py-10" id="features">
           <div className="flex items-end justify-between gap-6">
             <div>
