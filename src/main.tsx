@@ -18,7 +18,8 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const purchaseUrl = 'https://example.com/purchase-altcoin-strategy-lab-pro';
+const contactEmail = 'ajohn346046@gmail.com';
+const purchaseStatus = 'Coming soon';
 const liveDemoUrl = 'https://ajohn346046-bot.github.io/altcoin-strategy-lab-demo/';
 
 const features = [
@@ -109,11 +110,11 @@ function App() {
             </div>
           </div>
           <a
-            href={purchaseUrl}
+            href={`mailto:${contactEmail}?subject=Altcoin%20Strategy%20Lab%20Pro`}
             className="hidden items-center gap-2 rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800 sm:flex"
           >
             <ShoppingCart size={17} />
-            Buy Pro Source
+            {purchaseStatus}
           </a>
         </div>
       </header>
@@ -136,10 +137,10 @@ function App() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={purchaseUrl}
+                  href={`mailto:${contactEmail}?subject=Altcoin%20Strategy%20Lab%20Pro`}
                   className="inline-flex items-center gap-2 rounded-lg bg-mint px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white"
                 >
-                  Purchase Pro Source
+                  {purchaseStatus}
                   <ArrowRight size={17} />
                 </a>
                 <a
@@ -263,17 +264,18 @@ function App() {
 
         <section className="mx-auto max-w-7xl px-5 py-12" id="purchase">
           <div className="rounded-lg border border-slate-200 bg-white p-8 text-center shadow-glow">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Purchase link placeholder</p>
-            <h2 className="mt-3 text-3xl font-semibold">Ready to license the Pro source?</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal">Purchase status</p>
+            <h2 className="mt-3 text-3xl font-semibold">Altcoin Strategy Lab Pro is coming soon.</h2>
             <p className="mx-auto mt-3 max-w-2xl leading-7 text-slate-600">
-              Replace this placeholder with your Gumroad, Lemon Squeezy, Stripe, GitHub Sponsors, or direct sales page.
+              The paid Pro source package is being prepared for Gumroad / Lemon Squeezy. For early access or licensing
+              questions, contact {contactEmail}.
             </p>
             <a
-              href={purchaseUrl}
+              href={`mailto:${contactEmail}?subject=Altcoin%20Strategy%20Lab%20Pro`}
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-ink px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
               <ShoppingCart size={18} />
-              Purchase Altcoin Strategy Lab Pro
+              {purchaseStatus}
             </a>
           </div>
         </section>

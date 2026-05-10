@@ -23,7 +23,7 @@ This demo:
 - Feature list for the commercial product.
 - Strong financial-risk disclaimer.
 - Mock screenshot cards with no private data.
-- Purchase call-to-action placeholder.
+- Coming soon purchase call-to-action.
 - Pro-version summary for buyers.
 - License boundary summary.
 - Static Vite build suitable for GitHub Pages.
@@ -58,13 +58,13 @@ This public repository is a demo and marketing preview only. It is not the full 
 
 Add your final legal license text before public sale.
 
-## Purchase Link Placeholder
+## Purchase Status
 
-Replace this placeholder with your sales page:
+Coming soon.
 
-```text
-https://example.com/purchase-altcoin-strategy-lab-pro
-```
+The paid Pro source package is being prepared for Gumroad / Lemon Squeezy.
+
+Contact: `ajohn346046@gmail.com`
 
 Suggested platforms:
 
